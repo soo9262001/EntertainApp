@@ -1,5 +1,5 @@
 //
-//  Tv.swift
+//  DetailTv.swift
 //  MovieApp
 //
 //  Created by kms on 2021/08/18.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tv: Codable {
+struct DetailTv: Codable {
     var id: Int
     var name: String?
     var date: String?
@@ -42,8 +42,4 @@ struct Tv: Codable {
         count = try val.decodeIfPresent(Int.self, forKey: .count)
         overview = try val.decodeIfPresent(String.self, forKey: .overview)
     }
-}
-
-struct TvData: Codable {
-    var results : [Tv]
 }

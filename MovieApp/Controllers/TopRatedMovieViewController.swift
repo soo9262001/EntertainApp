@@ -47,6 +47,10 @@ extension TopRatedMovieViewController : UITableViewDelegate, UITableViewDataSour
         let topMovie = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
         let movie = TopRatedMovies[indexPath.row]
         
+        topMovie.titleLabel.text = movie.title
+        topMovie.dateLabel.text = movie.date
+        topMovie.averageLabel.text = "\(movie.average!)"
+        topMovie.voteLabel.text = "\(movie.count!)"
         topMovie.imgView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w500\(movie.img ?? "")"))
         
         return topMovie

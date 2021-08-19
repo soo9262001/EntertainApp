@@ -6,24 +6,68 @@
 //
 
 import UIKit
+import Tabman
+import Pageboy
 
-class TvTabmanViewController: UIViewController {
+class TvTabmanViewController: TabmanViewController {
+    
+    private var tvViewControllers : Array<UIViewController> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let popularVC = self.storyboard?.instantiateViewController(withIdentifier: "PopularTv") as! PopularTvViewController
+        let onVC = self.storyboard?.instantiateViewController(withIdentifier: "OnTv") as! OnTheAirTvViewController
+        
+        
+        tvViewControllers.append(popularVC)
+        tvViewControllers.append(onVC)
+        
+        self.dataSource = self
+        
+        let bar = TMBar.ButtonBar()
+        bar.layout.transitionStyle = .progressive
+        bar.backgroundView.style = .blur(style: .light)
+        bar.backgroundColor = .white
+        bar.layout.contentInset = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
+        bar.layout.interButtonSpacing = 40
+        bar.layout.contentMode = .intrinsic
+        bar.indicator.weight = .light
+        bar.indicator.tintColor = .black
+        bar.buttons.customize { button in
+            button.tintColor = .lightGray
+            button.selectedTintColor = .black
+        }
+        
+        addBar(bar, dataSource: self, at: .top)
+        
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+extension TvTabmanViewController : PageboyViewControllerDataSource,TMBarDataSource {
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        tvViewControllers.count
+    }
+    
+    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+        return tvViewControllers[index]
+    }
+    
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+        return nil
+    }
+    
+    func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
+        let item = TMBarItem(title: "")
+        if index == 0 {
+            item.title = "PopularTv"
+        }else {
+            item.title = "OnTheAirTv"
+        }
+        return item
+    }
+    
+    
+}
+

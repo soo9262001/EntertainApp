@@ -47,6 +47,10 @@ extension NowPlayingMovieViewController : UITableViewDelegate, UITableViewDataSo
         let nowMovie = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
         let movie = NowPlayingMovies[indexPath.row]
         
+        nowMovie.titleLabel.text = movie.title
+        nowMovie.dateLabel.text = movie.date
+        nowMovie.averageLabel.text = "\(movie.average!)"
+        nowMovie.voteLabel.text = "\(movie.count!)"
         nowMovie.imgView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w500\(movie.img ?? "")"))
         
         return nowMovie

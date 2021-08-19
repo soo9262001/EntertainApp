@@ -18,7 +18,7 @@ class MovieAPINetworkManager {
             case .success(let response):
                 do {
                     let movieData = try JSONDecoder().decode(MovieData.self, from: response.data)
-                    print(movieData)
+                    //print(movieData)
                     completion(movieData.results)
                 }catch let err{
                     print(err.localizedDescription)
@@ -52,6 +52,7 @@ class MovieAPINetworkManager {
         }
     }
     
+
     
     
     

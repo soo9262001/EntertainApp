@@ -27,8 +27,11 @@
 		259FEDD326CBF03200BE6EA8 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259FEDD126CBF03200BE6EA8 /* MovieTableViewCell.xib */; };
 		259FEDD526CC028000BE6EA8 /* DetailMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDD426CC028000BE6EA8 /* DetailMovie.swift */; };
 		259FEDD726CD412100BE6EA8 /* TvAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDD626CD412100BE6EA8 /* TvAPI.swift */; };
-		259FEDD926CD412F00BE6EA8 /* TvAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDD826CD412F00BE6EA8 /* TvAPIManager.swift */; };
+		259FEDD926CD412F00BE6EA8 /* TvAPINetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDD826CD412F00BE6EA8 /* TvAPINetworkManager.swift */; };
 		259FEDDB26CD41B800BE6EA8 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDDA26CD41B800BE6EA8 /* Tv.swift */; };
+		259FEDDD26CD493A00BE6EA8 /* DetailTv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDDC26CD493A00BE6EA8 /* DetailTv.swift */; };
+		259FEDE026CD709E00BE6EA8 /* TvCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDDE26CD709E00BE6EA8 /* TvCollectionViewCell.swift */; };
+		259FEDE126CD709E00BE6EA8 /* TvCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259FEDDF26CD709E00BE6EA8 /* TvCollectionViewCell.xib */; };
 		3DB0573E09562F5EA1508C55 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075E7814E408BC185A9D38C1 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +59,11 @@
 		259FEDD126CBF03200BE6EA8 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		259FEDD426CC028000BE6EA8 /* DetailMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovie.swift; sourceTree = "<group>"; };
 		259FEDD626CD412100BE6EA8 /* TvAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvAPI.swift; sourceTree = "<group>"; };
-		259FEDD826CD412F00BE6EA8 /* TvAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvAPIManager.swift; sourceTree = "<group>"; };
+		259FEDD826CD412F00BE6EA8 /* TvAPINetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvAPINetworkManager.swift; sourceTree = "<group>"; };
 		259FEDDA26CD41B800BE6EA8 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
+		259FEDDC26CD493A00BE6EA8 /* DetailTv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTv.swift; sourceTree = "<group>"; };
+		259FEDDE26CD709E00BE6EA8 /* TvCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvCollectionViewCell.swift; sourceTree = "<group>"; };
+		259FEDDF26CD709E00BE6EA8 /* TvCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvCollectionViewCell.xib; sourceTree = "<group>"; };
 		35AC130EF76EFE724F72CDF5 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		B3099DFFD39EDCCAD54FFAD8 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +121,7 @@
 				259FEDC926CBE4D800BE6EA8 /* MovieAPI.swift */,
 				259FEDD626CD412100BE6EA8 /* TvAPI.swift */,
 				259FEDCB26CBEB9B00BE6EA8 /* MovieAPINetworkManager.swift */,
-				259FEDD826CD412F00BE6EA8 /* TvAPIManager.swift */,
+				259FEDD826CD412F00BE6EA8 /* TvAPINetworkManager.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 				259FEDCD26CBEC4900BE6EA8 /* Movie.swift */,
 				259FEDDA26CD41B800BE6EA8 /* Tv.swift */,
 				259FEDD426CC028000BE6EA8 /* DetailMovie.swift */,
+				259FEDDC26CD493A00BE6EA8 /* DetailTv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +173,8 @@
 			children = (
 				259FEDD026CBF03200BE6EA8 /* MovieTableViewCell.swift */,
 				259FEDD126CBF03200BE6EA8 /* MovieTableViewCell.xib */,
+				259FEDDE26CD709E00BE6EA8 /* TvCollectionViewCell.swift */,
+				259FEDDF26CD709E00BE6EA8 /* TvCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 			files = (
 				259FEDAD26CBE03B00BE6EA8 /* LaunchScreen.storyboard in Resources */,
 				259FEDAA26CBE03B00BE6EA8 /* Assets.xcassets in Resources */,
+				259FEDE126CD709E00BE6EA8 /* TvCollectionViewCell.xib in Resources */,
 				259FEDD326CBF03200BE6EA8 /* MovieTableViewCell.xib in Resources */,
 				259FEDA826CBE03500BE6EA8 /* Main.storyboard in Resources */,
 			);
@@ -303,13 +313,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				259FEDBA26CBE3DD00BE6EA8 /* MovieTabmanViewController.swift in Sources */,
+				259FEDDD26CD493A00BE6EA8 /* DetailTv.swift in Sources */,
+				259FEDE026CD709E00BE6EA8 /* TvCollectionViewCell.swift in Sources */,
 				259FEDC226CBE44800BE6EA8 /* TopRatedMovieViewController.swift in Sources */,
 				259FEDD226CBF03200BE6EA8 /* MovieTableViewCell.swift in Sources */,
 				259FEDCC26CBEB9B00BE6EA8 /* MovieAPINetworkManager.swift in Sources */,
 				259FEDBE26CBE40800BE6EA8 /* MovieDetailViewController.swift in Sources */,
 				259FEDD526CC028000BE6EA8 /* DetailMovie.swift in Sources */,
 				259FEDA126CBE03500BE6EA8 /* AppDelegate.swift in Sources */,
-				259FEDD926CD412F00BE6EA8 /* TvAPIManager.swift in Sources */,
+				259FEDD926CD412F00BE6EA8 /* TvAPINetworkManager.swift in Sources */,
 				259FEDCA26CBE4D800BE6EA8 /* MovieAPI.swift in Sources */,
 				259FEDC826CBE4C100BE6EA8 /* OnTheAirTvViewController.swift in Sources */,
 				259FEDC026CBE41200BE6EA8 /* TvDetailViewController.swift in Sources */,

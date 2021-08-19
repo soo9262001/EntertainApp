@@ -6,24 +6,45 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TvDetailViewController: UIViewController {
+    
+    var id : Int = 0
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var averageLabel: UILabel!
+    @IBOutlet weak var voteLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //print(id)
+        parseData()
     }
-    */
 
+    func parseData() {
+        TvAPINetworkManager.detailTvDatas(tvId: id) { result in
+            print(result)
+            self.nameLabel.text = result.name
+            self.dateLabel.text = result.date
+            self.overviewLabel.text = result.overview
+            self.averageLabel.text = "\(result.average!)"
+            self.voteLabel.text = "\(result.count!)"
+            self.imgView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w500\(result.img ?? "")"))
+        }
+    }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
