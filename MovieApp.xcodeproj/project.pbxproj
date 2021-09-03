@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2583368A26E1F8B40027068E /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583368926E1F8B40027068E /* Resource.swift */; };
 		259FEDA126CBE03500BE6EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDA026CBE03500BE6EA8 /* AppDelegate.swift */; };
 		259FEDA326CBE03500BE6EA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FEDA226CBE03500BE6EA8 /* SceneDelegate.swift */; };
 		259FEDA826CBE03500BE6EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259FEDA626CBE03500BE6EA8 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		075E7814E408BC185A9D38C1 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2583368926E1F8B40027068E /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		259FED9D26CBE03500BE6EA8 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259FEDA026CBE03500BE6EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259FEDA226CBE03500BE6EA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				259FEDA026CBE03500BE6EA8 /* AppDelegate.swift */,
 				259FEDA226CBE03500BE6EA8 /* SceneDelegate.swift */,
+				2583368926E1F8B40027068E /* Resource.swift */,
 				259FEDB426CBE34C00BE6EA8 /* APIs */,
 				259FEDB526CBE35300BE6EA8 /* Models */,
 				259FEDCF26CBEFCD00BE6EA8 /* Cells */,
@@ -328,6 +331,7 @@
 				259FEDDB26CD41B800BE6EA8 /* Tv.swift in Sources */,
 				259FEDD726CD412100BE6EA8 /* TvAPI.swift in Sources */,
 				259FEDCE26CBEC4900BE6EA8 /* Movie.swift in Sources */,
+				2583368A26E1F8B40027068E /* Resource.swift in Sources */,
 				259FEDC426CBE45900BE6EA8 /* NowPlayingMovieViewController.swift in Sources */,
 				259FEDA326CBE03500BE6EA8 /* SceneDelegate.swift in Sources */,
 				259FEDBC26CBE3EA00BE6EA8 /* TvTabmanViewController.swift in Sources */,

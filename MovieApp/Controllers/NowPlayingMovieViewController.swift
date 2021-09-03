@@ -18,7 +18,7 @@ class NowPlayingMovieViewController: UIViewController {
         tableVIew.delegate = self
         tableVIew.dataSource = self
         getMovie()
-        tableVIew.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
+        tableVIew.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: R.CellName.movieCell)
     }
     
     func getMovie() {

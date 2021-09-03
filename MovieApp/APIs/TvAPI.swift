@@ -16,7 +16,7 @@ enum TvAPI {
 
 extension TvAPI : TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://api.themoviedb.org/3/tv") else { fatalError("URL Error")
+        guard let url = URL(string: R.BaseURL.tvURl) else { fatalError("URL Error")
         }
         return url
     }

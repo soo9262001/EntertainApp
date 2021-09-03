@@ -20,7 +20,7 @@ class PopularTvViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         getTv()
-        collectionView.register(UINib(nibName: "TvCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "tvCell")
+        collectionView.register(UINib(nibName: "TvCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: R.CellName.tvCell)
     }
     
     func getTv() {

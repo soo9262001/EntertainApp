@@ -19,7 +19,7 @@ class TopRatedMovieViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         getMovie()
-        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
+        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: R.CellName.movieCell)
     }
     
     func getMovie() {

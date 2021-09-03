@@ -16,7 +16,7 @@ enum MovieAPI {
 
 extension MovieAPI : TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie") else { fatalError("URL Error") }
+        guard let url = URL(string: R.BaseURL.movieURL) else { fatalError("URL Error") }
         return url
     }
     
