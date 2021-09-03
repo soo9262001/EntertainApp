@@ -1,4 +1,4 @@
 # MovieApp
-Moya와 Kingfisher를 활용
+Moya 활용
 
 TMDB API 
